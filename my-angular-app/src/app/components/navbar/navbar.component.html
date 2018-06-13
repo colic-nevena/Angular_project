@@ -11,17 +11,15 @@
       <li class="nav-item"><a class="nav-link" routerLink="teachers">Nastavnici</a></li>      
     </ul>
     
-    <ul class="navbar-nav  mr-5 mt-lg-0 bg-info">
-      <li class="nav-item dropdown nav-item">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" aria-hidden="false">
-        Zakazivanje 
-        </a>
-        <div class="dropdown-menu">
-          <a class="nav-link" routerLink="upis">Prijavi se na kurs</a>
-          <a class="nav-link" routerLink="ispis">Otkaži prijavu</a>         
-        </div>
-      </li>        
-    </ul>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+       Zakazivanje
+      </button>
+      <div class="dropdown-menu">
+        <a class="nav-link" routerLink="upis">Prijavi se na kurs</a>
+        <a class="nav-link" routerLink="ispis">Otkazi prijavu</a>     
+      </div>
+    </div>
   </div>
 </nav>
 
