@@ -1,0 +1,401 @@
+{
+  "nastavnici": [
+    {
+      "id": 1,
+      "licno_ime": "Nenad Jović",
+      "rating": 4.38,
+      "kursevi": [
+        "matematika",
+        "hemija",
+        "fizika"
+      ],
+      "dani": [
+        "pon",
+        "uto",
+        "sre",
+        "cet",
+        "pet",
+        "sub"
+      ],
+      "sati": [
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "id": 2,
+      "licno_ime": "Danica Jović",
+      "rating": 4.53,
+      "kursevi": [
+        "engleski",
+        "nemački",
+        "španski"
+      ],
+      "dani": [
+        "uto",
+        "sre",
+        "pet",
+        "sub"
+      ],
+      "sati": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "id": 3,
+      "licno_ime": "Helena Milić",
+      "rating": 4.24,
+      "kursevi": [
+        "engleski",
+        "nemački",
+        "španski"
+      ],
+      "dani": [
+        "pon",
+        "uto",
+        "sre",
+        "cet",
+        "pet",
+        "sub"
+      ],
+      "sati": [
+        9,
+        10,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "id": 4,
+      "licno_ime": "Marko Andrić",
+      "rating": 4.77,
+      "kursevi": [
+        "norveški",
+        "tehničko",
+        "švedski"
+      ],
+      "dani": [
+        "pon",
+        "uto",
+        "sre",
+        "cet"
+      ],
+      "sati": [
+        9,
+        10,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "id": 5,
+      "licno_ime": "Marija Stošić",
+      "rating": 4.9,
+      "kursevi": [
+        "hemija",
+        "fizika",
+        "nemački"
+      ],
+      "dani": [
+        "pon",
+        "sre",
+        "cet",
+        "sub"
+      ],
+      "sati": [
+        9,
+        10,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "id": 6,
+      "licno_ime": "Ana Petrova",
+      "rating": 4.3,
+      "kursevi": [
+        "hemija",
+        "fizika",
+        "nemački"
+      ],
+      "dani": [
+        "pon",
+        "sre",
+        "cet",
+        "sub"
+      ],
+      "sati": [
+        9,
+        10,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "id": 7,
+      "licno_ime": "Petar Stošić",
+      "rating": 4.89,
+      "kursevi": [
+        "matematika",
+        "tehničko"
+      ],
+      "dani": [
+        "pon",
+        "sre",
+        "cet",
+        "sub"
+      ],
+      "sati": [
+        9,
+        10,
+        13,
+        14,
+        15,
+        16
+      ]
+    }
+  ],
+  "predmeti": [
+    {
+      "id": 1,
+      "ime": "Matematika",
+      "rating": 5,
+      "mesta_na_kursu": 4,
+      "science": true,
+      "zabrana_rez": false,
+      "dani": [
+        "utorak",
+        "sreda",
+        "petak",
+        "subota"
+      ],
+      "sati": [
+        "8",
+        "9",
+        "10",
+        "13",
+        "17"
+      ]
+    },
+    {
+      "id": 2,
+      "ime": "Fizika",
+      "rating": 4.8,
+      "mesta_na_kursu": 8,
+      "science": true,
+      "zabrana_rez": false,
+      "dani": [
+        "ponedeljak",
+        "utorak",
+        "sreda",
+        "petak",
+        "subota"
+      ],
+      "sati": [
+        "8",
+        "10",
+        "11",
+        "12",
+        "14",
+        "15",
+        "16"
+      ]
+    },
+    {
+      "id": 3,
+      "ime": "Hemija",
+      "rating": 4.7,
+      "mesta_na_kursu": 7,
+      "science": true,
+      "zabrana_rez": false,
+      "dani": [
+        "ponedeljak",
+        "sreda",
+        "četvrtak",
+        "petak"
+      ],
+      "sati": [
+        "8",
+        "11",
+        "12",
+        "13",
+        "14",
+        "17"
+      ]
+    },
+    {
+      "id": 4,
+      "ime": "Engleski",
+      "rating": 4.88,
+      "mesta_na_kursu": 3,
+      "science": false,
+      "zabrana_rez": false,
+      "dani": [
+        "ponedeljak",
+        "sreda",
+        "četvrtak",
+        "petak",
+        "subota"
+      ],
+      "sati": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "15",
+        "16",
+        "17"
+      ]
+    },
+    {
+      "id": 5,
+      "ime": "Nemački",
+      "rating": 4.68,
+      "mesta_na_kursu": 5,
+      "science": false,
+      "zabrana_rez": false,
+      "dani": [
+        "ponedeljak",
+        "sreda",
+        "četvrtak",
+        "petak"
+      ],
+      "sati": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "15",
+        "16",
+        "17"
+      ]
+    },
+    {
+      "id": 6,
+      "ime": "Španski",
+      "rating": 4.9,
+      "mesta_na_kursu": 4,
+      "science": false,
+      "zabrana_rez": false,
+      "dani": [
+        "ponedeljak",
+        "utorak",
+        "četvrtak"
+      ],
+      "sati": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "16",
+        "17"
+      ]
+    },
+    {
+      "id": 7,
+      "ime": "Norveški",
+      "rating": 4.9,
+      "mesta_na_kursu": 0,
+      "zabrana_rez": true,
+      "dani": [
+        "ponedeljak",
+        "utorak",
+        "sreda",
+        "četvrtak"
+      ],
+      "sati": [
+        "9",
+        "10",
+        "12",
+        "14",
+        "15",
+        "17"
+      ]
+    },
+    {
+      "id": 8,
+      "ime": "Švedski",
+      "rating": 4.5,
+      "mesta_na_kursu": 3,
+      "science": false,
+      "zabrana_rez": false,
+      "dani": [
+        "ponedeljak",
+        "utorak",
+        "sreda",
+        "četvrtak"
+      ],
+      "sati": [
+        "8",
+        "10",
+        "11",
+        "12",
+        "13",
+        "17"
+      ]
+    },
+    {
+      "id": 9,
+      "ime": "Tehničko",
+      "rating": 4.8,
+      "mesta_na_kursu": 4,
+      "science": true,
+      "zabrana_rez": false,
+      "dani": [
+        "ponedeljak",
+        "utorak",
+        "sreda",
+        "petak",
+        "subota"
+      ],
+      "sati": [
+        "8",
+        "10",
+        "11",
+        "12",
+        "14",
+        "15",
+        "16"
+      ]
+    }
+  ],
+  "prijavljeni": [
+    {
+      "id": 1,
+      "ime": "Nevena",
+      "prezime": "Čolić",
+      "kurs": "Engleski",
+      "email": "mrsnevenac@gmail.com"
+    },
+    {
+      "id": 2,
+      "ime": "Majda",
+      "prezime": "Čolić",
+      "kurs": "Hemija",
+      "email": "majda1506@gmail.com"
+    }
+  ]
+}
