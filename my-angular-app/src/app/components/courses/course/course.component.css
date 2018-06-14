@@ -1,0 +1,51 @@
+.divKursSc {
+    width:200px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 20px;  
+    text-align: center;
+    vertical-align: middle;    
+    border:1px solid black;
+    float:left;
+    background-color:#669999;
+    margin:5% 2% 0 5%;
+  }
+
+  .divKursSc:hover {
+      opacity: 0.8;
+      border:2.5px solid black;
+  }
+  
+  .divKursLang:hover {
+    opacity: 0.8;
+    border:2px solid black;
+}
+
+.divKursLang {
+    width:200px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 20px;  
+    text-align: center;
+    vertical-align: middle;    
+    border:1px solid black;
+    float:left;
+    background-color:#4d648d;
+    margin:5% 2% 0 5%;
+  }
+  
+  
+.txt-stil {
+    font-size: 14px;  
+    font-weight: normal;
+}
+
+
+.selKurs {
+    position: absolute;
+    top:30%;
+    right: 0%;
+    border:1px solid black;
+    border-radius: 2%;
+    background-color:grey;
+}

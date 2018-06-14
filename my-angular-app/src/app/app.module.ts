@@ -5,14 +5,18 @@ import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import { FormsModule} from '@angular/forms';
 
+import { rootReducer } from "./store";
 import { AppComponent } from './app.component';
 import { SchoolService } from './services/school.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { UpisComponent } from './components/forms/upis/upis.component';
 import { IspisComponent } from './components/forms/ispis/ispis.component';
-import { CoursesComponent } from './components/courses/courses.component';
-import { TeachersComponent } from './components/teachers/teachers.component';
+import { CourseComponent } from './components/courses/course/course.component';
+import { CoursesListComponent } from './components/courses/courses-list/courses-list.component';
+import { CourseDetailsComponent } from './components/courses/course-details/course-details.component';
+import { TeacherComponent } from './components/teachers/teacher/teacher.component';
+import { TeachersListComponent } from './components/teachers/teachers-list/teachers-list.component';
 
 
 const appRoutes: Routes = [  
@@ -28,11 +32,11 @@ const appRoutes: Routes = [
     component: IspisComponent },
   {
     path: 'courses',
-    component: CoursesComponent
+    component: CoursesListComponent
   },
   {
     path: 'teachers',
-    component: TeachersComponent
+    component: TeachersListComponent
   },
   { path: '',
     redirectTo: '/home',
@@ -50,13 +54,18 @@ const appRoutes: Routes = [
     HomeComponent,
     UpisComponent,
     IspisComponent,
-    CoursesComponent,
-    TeachersComponent
+    CourseComponent,
+    CoursesListComponent,
+    CourseDetailsComponent,
+    TeacherComponent,
+    TeachersListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)    
+    RouterModule.forRoot(appRoutes),
+    StoreModule.forRoot(rootReducer),
+    StoreDevtoolsModule.instrument({}) 
   ],
   providers: [
     SchoolService

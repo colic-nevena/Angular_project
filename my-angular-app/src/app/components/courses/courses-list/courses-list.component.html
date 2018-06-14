@@ -1,0 +1,10 @@
+<div class= "courses-container">
+  <ul>
+    <li *ngFor="let kurs of courses$ | async">
+      <app-course [course]="kurs" (selectedCourse)=" onSelected($event)" [selected]="kurs === selectedCourse">        
+      </app-course>      
+    </li>
+  </ul>
+  
+  <!--<app-course-details [course]="selectedCourse" (changeCourse)="onCourseChanged($event)"></app-course-details>-->
+</div>
