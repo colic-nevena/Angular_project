@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Course } from '../../../models/course';
 import { State } from "../../../store";
 import { Store } from "@ngrx/store";
+import { LoadCourses } from '../../../store/actions';
 
 @Component({
   selector: 'app-courses-list',
@@ -23,6 +24,7 @@ export class CoursesListComponent implements OnInit {
   ngOnInit() {
     
     this.courses$ = this.store$.select(state => state.courses);
+    this.store$.dispatch(new LoadCourses());
     
     this.store$
         .select(state => state.selectedCourse)

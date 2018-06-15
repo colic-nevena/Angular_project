@@ -1,23 +1,34 @@
 import { Injectable } from '@angular/core';
+import {Course } from "../models/course";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class SchoolService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
   
   
+  getCourses() : Observable<Course[]> {
+    return this.http.get<Course[]>(`http://localhost:3000/predmeti`)
+    .pipe(catchError((error:any)=> Observable.throw(error.json())))
+  }
   
-  public getCourses() {              
+  
+  /*
+  public static getCourses() {              
     return fetch('http://localhost:3000/predmeti')
-      .then(response=>response.json())
+      .then(response => response.json())
   }
    
    
    
    
-  public getStudents() {              
+  public static getStudents() {              
     return fetch('http://localhost:3000/prijavljeni')
       .then(response=>response.json())
   }
@@ -26,7 +37,7 @@ export class SchoolService {
       
       
       
-  public getTeachers() {              
+  public static getTeachers() {              
     return fetch('http://localhost:3000/nastavnici')
       .then(response=>response.json())
   }
@@ -40,7 +51,7 @@ export class SchoolService {
    
    
    
-  public getCourseByName(ime) {
+  public static getCourseByName(ime) {
     return fetch(`http://localhost:3000/predmeti/?ime=${ime}`)
       .then( response => response.json());
    }
@@ -48,7 +59,7 @@ export class SchoolService {
    
    
    
-  public getSelected(id) {
+  public static getSelected(id) {
     return fetch(`http://localhost:3000/predmeti/${id}`)
       .then(response => response.json())
    }
@@ -56,7 +67,7 @@ export class SchoolService {
    
    
    
-  public deleteStudent(id) {
+  public static deleteStudent(id) {
     return fetch(`http://localhost:3000/prijavljeni/${id}`,{
       method:"DELETE"
       }).then(response => response.json());        
@@ -64,7 +75,7 @@ export class SchoolService {
    
    
    
-  public updateCourse(id, data) {
+  public static updateCourse(id, data) {
     return fetch(`http://localhost:3000/predmeti/${id}`, {
       method: 'PUT',
       headers: {
@@ -80,7 +91,7 @@ export class SchoolService {
    
    
    
-  public addStudent(data) {
+  public static addStudent(data) {
     return fetch('http://localhost:3000/prijavljeni', {
       method: 'POST',
       headers: {
@@ -92,7 +103,7 @@ export class SchoolService {
       }).then(res => res.json())
         
   }
-  
+  */
   
   
   

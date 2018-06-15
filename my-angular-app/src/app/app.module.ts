@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {StoreModule} from '@ngrx/store';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { FormsModule} from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
+import { effects } from "./store";
+import { EffectsModule } from '@ngrx/effects';
 
 import { rootReducer } from "./store";
 import { AppComponent } from './app.component';
@@ -49,7 +52,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
     NavbarComponent,
     HomeComponent,
     UpisComponent,
@@ -58,13 +61,15 @@ const appRoutes: Routes = [
     CoursesListComponent,
     CourseDetailsComponent,
     TeacherComponent,
-    TeachersListComponent
+    TeachersListComponent   
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes),
     StoreModule.forRoot(rootReducer),
+    BrowserModule,
+    HttpClientModule,  
+    FormsModule,
+    RouterModule.forRoot(appRoutes),    
+    EffectsModule.forFeature(effects),
     StoreDevtoolsModule.instrument({}) 
   ],
   providers: [
