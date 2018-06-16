@@ -1,8 +1,19 @@
 import { Injectable } from '@angular/core';
-import {Course } from "../models/course";
-import { HttpClient } from "@angular/common/http";
+import { Course } from "../models/course";
 import { Observable } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, subscribeOn } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
+
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': 'my-auth-token'
+  })
+};
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +24,11 @@ export class SchoolService {
   constructor(private http: HttpClient) { }
   
   
+  
+  
   getCourses() : Observable<Course[]> {
-    return this.http.get<Course[]>(`http://localhost:3000/predmeti`)
-    .pipe(catchError((error:any)=> Observable.throw(error.json())))
+    console.log("pozvana fja u servisu")
+    return this.http.get<Course[]>('http://localhost:3000/predmeti');  
   }
   
   

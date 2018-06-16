@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { Course } from '../../../models/course';
 import { State } from "../../../store";
 import { Store } from "@ngrx/store";
-import { LoadCourses } from '../../../store/actions';
+import { LoadCourses, SelectCourse } from '../../../store/actions';
 
 @Component({
   selector: 'app-courses-list',
@@ -16,28 +16,31 @@ export class CoursesListComponent implements OnInit {
   
   courses$: Observable<Course[]>;
   selectedCourse: Course;
+  
 
   constructor(private store$: Store<State>) {
     
-   }
+  }
+   
+   
 
-  ngOnInit() {
+  ngOnInit() {   
+   
+  this.store$.dispatch(new LoadCourses());
+  this.courses$ = this.store$.select(state => state.courses);
     
-    this.courses$ = this.store$.select(state => state.courses);
-    this.store$.dispatch(new LoadCourses());
-    
-    this.store$
-        .select(state => state.selectedCourse)
-        .subscribe(selected => {
-          this.selectedCourse = selected;
-        })
+  this.store$
+    .select(state => state.selectedCourse)
+    .subscribe(selected => {
+    this.selectedCourse = selected;
+    })
   }
   
   
   
   onSelected(course: Course) {
-    console.log("Selektovan je: " + course);
-    //this.store$.dispatch(new SelectCourse(course))
+    console.log("Selektovan je: " + course.ime);
+    this.store$.dispatch(new SelectCourse(course))
   }
   
   

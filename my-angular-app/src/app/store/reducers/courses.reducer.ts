@@ -1,26 +1,21 @@
-import { Action } from "@ngrx/store";
+import { ActionReducer, Action } from '@ngrx/store';
 import { Course } from "../../models/course";
-import { SchoolService } from "../../services/school.service";
-import {LOAD_COURSES, LoadCourses, LOAD_COURSES_SUCCESS, LoadCoursesSuccess, LoadCoursesFail, LOAD_COURSES_FAIL} from "../actions/index";
-
-//ovde mislim da treba da se pozove baza da vrati sve kurseve, to je initial state
-const initialState: Course[] = [];
+import {LOAD_COURSES, LoadCourses, LOAD_COURSES_SUCCESS, LoadCoursesSuccess } from "../actions/index";
 
 
 
 
-
-export default function (state: Course[] = initialState, action: Action) {
-      switch(action.type){
-        case LOAD_COURSES: {
-            return {...state, loading: true}
+export default function (state: Course[] = [], action: Action) {
+      switch(action.type) {
+        
+        case LOAD_COURSES_SUCCESS: {     
+            console.log("uso u akciju SUCCESS")       
+            const {courses} = action as LoadCoursesSuccess; 
+            console.log(courses) 
+            return courses;
+           
         }
-        case LOAD_COURSES_SUCCESS: {              
-              return {...state, loading: false, loaded: true}
-        }
-        case LOAD_COURSES_FAIL: {
-              return {...state, loading: false, loaded: false}
-        }
+      
         default:
           return state;
       }

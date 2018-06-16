@@ -1,0 +1,20 @@
+<form>
+    <div class="container4">
+     <h2 class = "stilNaslov">Otkaži članstvo</h2>
+    </div>
+
+    <div class="container1">
+     <label><strong>Ime</strong></label>
+     <input type="text" placeholder="Unesite Vaše ime" [(ngModel)]="student.ime"/>
+
+    <label><strong>Prezime</strong></label>
+    <input type="text" placeholder="Unesite Vaše prezime" [(ngModel)]="student.prezime"/>
+
+    <label><strong>Email adresa</strong></label>
+    <input type="text" placeholder="Unesite Vašu email adresu" [(ngModel)]="student.email"/>  
+
+
+    <button type="button" class="btn btn-danger prijavibtn" (click)= "onDeleteStudent()">Ispiši me</button>
+
+   </div>
+</form>

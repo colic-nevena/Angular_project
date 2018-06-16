@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { FormsModule} from '@angular/forms';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { HttpModule } from '@angular/http';
 import { effects } from "./store";
 import { EffectsModule } from '@ngrx/effects';
 
@@ -61,15 +62,16 @@ const appRoutes: Routes = [
     CoursesListComponent,
     CourseDetailsComponent,
     TeacherComponent,
-    TeachersListComponent   
+    TeachersListComponent
   ],
   imports: [
     StoreModule.forRoot(rootReducer),
-    BrowserModule,
+    BrowserModule, 
+    HttpModule, 
     HttpClientModule,  
     FormsModule,
     RouterModule.forRoot(appRoutes),    
-    EffectsModule.forFeature(effects),
+    EffectsModule.forRoot(effects),
     StoreDevtoolsModule.instrument({}) 
   ],
   providers: [

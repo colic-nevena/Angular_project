@@ -1,3 +1,28 @@
-<p>
-  upis works!
-</p>
+<form>
+  <div class="container4">
+   <h2 class= "stilNaslov">Prijavi se na kurs</h2>
+  </div>
+
+  <div class="container1">
+   <label><b>Ime</b></label>
+   <input type="text" placeholder="Unesite Vaše ime" [(ngModel)]="student.ime"/>
+
+  <label><b>Prezime</b></label>
+  <input type="text" placeholder="Unesite Vaše prezime" [(ngModel)]="student.prezime"/>
+
+  <label><strong>Email adresa</strong></label>
+  <input type="text" placeholder="Unesite Vašu email adresu" [(ngModel)]="student.email"/>  
+
+  <label class="desno"><strong>Kurs:</strong></label>
+ 
+  <select class='form-control col-sm-5' [(ngModel)]="student.kurs">
+          <option value="null" disabled selected>Kursevi</option>
+          <option>Engleski</option>
+          <option>Matematika</option>
+  </select>  
+  
+  
+  <button type="button" class="btn btn-primary prijavibtn" (click)="onAddStudent()" >Upiši me</button>
+
+ </div>
+</form>
