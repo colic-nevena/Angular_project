@@ -8,6 +8,8 @@ export const LOAD_COURSES = "Load courses";
 export const LOAD_COURSES_SUCCESS = "Load courses Success";
 export const LOAD_TEACHERS = "Load teachers";
 export const LOAD_TEACHERS_SUCCESS = "Load teachers Success";
+export const SELECT_BY_DAY = "Select by day";
+export const SELECT_BY_DAY_SUCCESS = "Select by day Success";
 
 
 
@@ -50,3 +52,24 @@ export class SelectCourse implements Action {
 
 
 
+export class SelectByDay implements Action {
+    type = SELECT_BY_DAY;
+    dan: string;
+    constructor(dan: string) {        
+        this.dan = dan;
+    } 
+}
+
+
+
+export class SelectByDaySuccess implements Action {
+    type = SELECT_BY_DAY_SUCCESS;
+    courses: Course[];    
+    dan: string;
+    
+    constructor(courses: Course[], dan: string){
+        this.courses = [...courses];
+        this.dan = dan;
+        
+    }
+}

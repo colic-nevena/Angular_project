@@ -4,6 +4,12 @@
       <app-course [course]= "kurs" (selectedCourse)=" onSelected($event)" [selected]="kurs === selectedCourse">        
       </app-course>      
     </div>
+    
+    <div class="selDan">
+      <select class='form-control col-sm-2 sel' (change)= "selectByDay($event.target.value)">
+        <option *ngFor= "let dan of days" value={{dan.naziv}}>{{dan.naziv}}</option>       
+      </select>
+    </div>
   
   
   <app-course-details [course]="selectedCourse"></app-course-details>

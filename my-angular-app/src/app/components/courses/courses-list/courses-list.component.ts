@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { Course } from '../../../models/course';
 import { State } from "../../../store";
 import { Store } from "@ngrx/store";
-import { LoadCourses, SelectCourse } from '../../../store/actions';
+import { LoadCourses, SelectCourse, SelectByDay } from '../../../store/actions';
 
 @Component({
   selector: 'app-courses-list',
@@ -16,6 +16,15 @@ export class CoursesListComponent implements OnInit {
   
   courses$: Observable<Course[]>;
   selectedCourse: Course;
+  
+  days = [
+    { naziv: "ponedeljak"},
+    { naziv: "utorak" },
+    { naziv: "sreda" },
+    { naziv: "četvrtak"},
+    { naziv: "petak"},
+    { naziv: "subota"}
+]
   
 
   constructor(private store$: Store<State>) {
@@ -37,12 +46,15 @@ export class CoursesListComponent implements OnInit {
   
   
   
-  onSelected(course: Course) {
-    console.log("Selektovan je: " + course.ime);
+  onSelected(course: Course) {    
     this.store$.dispatch(new SelectCourse(course))
   }
   
   
+  
+  selectByDay(dan) {    
+    this.store$.dispatch(new SelectByDay(dan))
+  }
   
   
   

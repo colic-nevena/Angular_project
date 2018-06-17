@@ -1,18 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Course } from "../models/course";
 import { Observable } from 'rxjs';
-import { catchError, subscribeOn } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { HttpHeaders } from '@angular/common/http';
 import { Teacher } from '../models/teacher';
 import { Student } from '../models/student';
-
-
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':  'application/json'
-  })
-};
 
 
 
@@ -38,9 +29,13 @@ export class SchoolService {
   
   
   addNewStudent(student: Student) : void {
-    console.log("pozvana fja ADD STUDENT")
-    console.log(student)
-    this.http.post('http://localhost:3000/prijavljeni', student, httpOptions);  
+    
+    console.log(student.kurs);
+    this.http.post('http://localhost:3000/prijavljeni', student
+    ).subscribe(response => response);
+    //prvo vrati kurs po imenu pa onda pravi novi objekat za PUT
+    
+    //this.http.get<Course[]>('http://localhost:3000/predmeti')
   }
   
   

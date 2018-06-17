@@ -1,6 +1,6 @@
 .divKursSc {
     width:200px;
-    height: 100px;
+    height: 110px;
     font-weight: bold;
     font-size: 20px;  
     text-align: center;
@@ -10,6 +10,7 @@
     background-color:#669999;
     margin:5% 2% 0 5%;
     cursor: pointer;
+    padding-bottom:1%;
   }
 
   .divKursSc:hover {
@@ -27,7 +28,7 @@
 .divKursLang {
     cursor: pointer;
     width:200px;
-    height: 100px;
+    height: 110px;
     font-weight: bold;
     font-size: 20px;  
     text-align: center;
@@ -36,6 +37,7 @@
     float:left;
     background-color:#4d648d;
     margin:5% 2% 0 5%;
+    padding-bottom: 1%;
   }
   
   
@@ -45,11 +47,3 @@
 }
 
 
-.selKurs {
-    position: absolute;
-    top:60%;
-    right: 78.5%;
-    border:1px solid black;
-    border-radius: 2%;
-    background-color:grey;
-}
