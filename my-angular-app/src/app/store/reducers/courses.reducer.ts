@@ -4,7 +4,6 @@ import {LOAD_COURSES_SUCCESS, LoadCoursesSuccess, SELECT_BY_DAY, SelectByDaySucc
 
 
 
-
 export default function (state: Course[] = [], action: Action) {
       switch(action.type) {
         
@@ -18,10 +17,7 @@ export default function (state: Course[] = [], action: Action) {
        case SELECT_BY_DAY_SUCCESS: {
            
             const {courses, dan} = action as SelectByDaySuccess;
-            
-            console.log("saksessss")
-            console.log(dan)
-            
+                      
             const zaPrikaz = [];
             
             courses.forEach(kurs => {

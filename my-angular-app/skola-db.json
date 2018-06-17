@@ -31,7 +31,7 @@
     {
       "id": 2,
       "licno_ime": "Danica Jović",
-      "rating": 4.23,
+      "rating": 4.33,
       "kursevi": [
         "engleski",
         "nemački",
@@ -131,7 +131,7 @@
     {
       "id": 6,
       "licno_ime": "Ana Petrova",
-      "rating": 4.3,
+      "rating": 4.47,
       "kursevi": [
         "hemija",
         "fizika",
@@ -155,7 +155,7 @@
     {
       "id": 7,
       "licno_ime": "Petar Stošić",
-      "rating": "0.001",
+      "rating": 5,
       "kursevi": [
         "matematika",
         "tehničko"
@@ -202,7 +202,11 @@
     {
       "id": 2,
       "ime": "Engleski",
-      "rating": 4.9,
+      "rating": 4.7,
+      "brojGlasova": 1,
+      "mesta_na_kursu": 4,
+      "science": false,
+      "zabrana_rez": false,
       "dani": [
         "ponedeljak",
         "utorak",
@@ -245,11 +249,11 @@
     },
     {
       "id": 4,
-      "ime": "Engleski",
+      "ime": "Fizika",
       "rating": 4.88,
       "brojGlasova": 1,
       "mesta_na_kursu": 3,
-      "science": false,
+      "science": true,
       "zabrana_rez": false,
       "dani": [
         "ponedeljak",
@@ -272,8 +276,8 @@
       "id": 5,
       "ime": "Nemački",
       "rating": 4.68,
-      "brojGlasova": 1,
-      "mesta_na_kursu": 5,
+      "brojGlasova": 4.68,
+      "mesta_na_kursu": 4,
       "science": false,
       "zabrana_rez": false,
       "dani": [
@@ -343,7 +347,7 @@
       "ime": "Švedski",
       "rating": 4.5,
       "brojGlasova": 4.5,
-      "mesta_na_kursu": 2,
+      "mesta_na_kursu": 1,
       "science": false,
       "zabrana_rez": false,
       "dani": [
@@ -404,10 +408,10 @@
     },
     {
       "id": 3,
-      "ime": "dslkjdk",
-      "prezime": "kmdkmks",
-      "kurs": "Švedski",
-      "email": "dlksnd"
+      "ime": "djij",
+      "prezime": "djq",
+      "kurs": "Nemački",
+      "email": "iojoj"
     }
   ]
 }

@@ -6,6 +6,7 @@ import { SchoolService } from "../../../services/school.service"
 import { Observable } from 'rxjs';
 import { Course } from '../../../models/course';
 
+
 @Component({
   selector: 'app-upis',
   templateUrl: './upis.component.html',

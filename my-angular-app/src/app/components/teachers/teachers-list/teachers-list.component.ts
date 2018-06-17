@@ -4,6 +4,7 @@ import { Teacher } from '../../../models/teacher';
 import { State } from "../../../store";
 import { Store } from "@ngrx/store";
 import { LoadTeachers } from '../../../store/actions';
+import { selectors as TeachersSelectors } from '../../../store/reducers/teachers.reducer';
 
 
 @Component({
@@ -19,10 +20,9 @@ export class TeachersListComponent implements OnInit {
   
   constructor(private store$: Store<State>) { }
 
-  ngOnInit() {
-    
+  ngOnInit() {    
     this.store$.dispatch(new LoadTeachers());
-    this.teachers$ = this.store$.select(state => state.teachers);
+    this.teachers$ = this.store$.select((state: State) => TeachersSelectors.selectAll(state.teachers));
   }
 
 }
