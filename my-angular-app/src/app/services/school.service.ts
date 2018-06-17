@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Teacher } from '../models/teacher';
 import { Student } from '../models/student';
+import { map } from 'rxjs/operators';
 
 
 
@@ -28,14 +29,38 @@ export class SchoolService {
   }
   
   
-  addNewStudent(student: Student) : void {
+  
+  
+  
+  
+  addNewStudent(student: Student) : void {    
     
-    console.log(student.kurs);
     this.http.post('http://localhost:3000/prijavljeni', student
     ).subscribe(response => response);
-    //prvo vrati kurs po imenu pa onda pravi novi objekat za PUT
+  
+    const ime = student.kurs;
     
-    //this.http.get<Course[]>('http://localhost:3000/predmeti')
+    this.http.get<Course>(`http://localhost:3000/predmeti/?ime=${ime}`).subscribe(
+      kurs => {
+        const br = (kurs[0].mesta_na_kursu-1 > 0) ? kurs[0].mesta_na_kursu-1 : 0;
+        const zab = br === 0 ? true : false;
+        
+        if(!zab) {
+        const novi = {
+          id: kurs[0].id,
+          ime: kurs[0].ime,
+          rating: kurs[0].rating,
+          mesta_na_kursu: br,
+          science: kurs[0].science,
+          zabrana_rez: zab,
+          dani: kurs[0].dani,
+          sati: kurs[0].sati
+        };
+               
+        this.http.put(`http://localhost:3000/predmeti/${kurs[0].id}`, novi).subscribe(response => response);
+     } else
+     alert(`Nažalost sva mesta na kursu ${kurs[0].ime} su popunjena.`)}
+    )  
   }
   
   

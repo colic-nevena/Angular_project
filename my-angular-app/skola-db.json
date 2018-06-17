@@ -361,7 +361,7 @@
       "id": 9,
       "ime": "Tehničko",
       "rating": 4.8,
-      "mesta_na_kursu": 4,
+      "mesta_na_kursu": 3,
       "science": true,
       "zabrana_rez": false,
       "dani": [
@@ -396,6 +396,41 @@
       "prezime": "Čolić",
       "kurs": "Hemija",
       "email": "majda1506@gmail.com"
+    },
+    {
+      "id": 3,
+      "ime": "nena",
+      "prezime": "nenic",
+      "kurs": "Tehničko",
+      "email": "dsdj"
+    },
+    {
+      "id": 4,
+      "ime": "dkwjd",
+      "prezime": "wkd",
+      "kurs": "Tehničko",
+      "email": "wjdkwjd"
+    },
+    {
+      "id": 5,
+      "ime": "",
+      "prezime": "",
+      "kurs": "Tehničko",
+      "email": ""
+    },
+    {
+      "id": 6,
+      "ime": "stefan",
+      "prezime": "covic",
+      "kurs": "Tehničko",
+      "email": "sndnsj"
+    },
+    {
+      "id": 7,
+      "ime": "dfefjw",
+      "prezime": "efkkwj",
+      "kurs": "Norveški",
+      "email": "kdfjkejf"
     }
   ]
 }
