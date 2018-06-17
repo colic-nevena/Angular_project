@@ -5,24 +5,23 @@
 
   <div class="container1">
    <label><b>Ime</b></label>
-   <input type="text" placeholder="Unesite Vaše ime" [(ngModel)]="student.ime"/>
+   <input type="text" placeholder="Unesite Vaše ime" name="ime" [(ngModel)]="student.ime"/>
 
   <label><b>Prezime</b></label>
-  <input type="text" placeholder="Unesite Vaše prezime" [(ngModel)]="student.prezime"/>
+  <input type="text" placeholder="Unesite Vaše prezime" name="prez" [(ngModel)]="student.prezime"/>
 
   <label><strong>Email adresa</strong></label>
-  <input type="text" placeholder="Unesite Vašu email adresu" [(ngModel)]="student.email"/>  
+  <input type="text" placeholder="Unesite Vašu email adresu" name="mejl" [(ngModel)]="student.email"/>  
 
   <label class="desno"><strong>Kurs:</strong></label>
  
-  <select class='form-control col-sm-5' [(ngModel)]="student.kurs">
-          <option value="null" disabled selected>Kursevi</option>
-          <option>Engleski</option>
-          <option>Matematika</option>
+  <select  name="sel" class='form-control col-sm-5' [(ngModel)]="student.kurs">  
+        <option value="null" disabled selected>Kursevi</option>      
+        <option *ngFor="let kurs of courses$ | async" name="opt" value= {{kurs.ime}}>{{kurs.ime}}</option>          
   </select>  
   
   
-  <button type="button" class="btn btn-primary prijavibtn" (click)="onAddStudent()" >Upiši me</button>
+  <button type="button" class="btn btn-primary prijavibtn" (click)="onAddStudent(student)">Upiši me</button>
 
  </div>
 </form>

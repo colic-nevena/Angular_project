@@ -8,8 +8,7 @@ export default function (state: Course = null, action: Action) {
         
         case SELECT_COURSE: {
             return (action as SelectCourse).course;
-        }
-        
+        }       
              
         default:
         return state;

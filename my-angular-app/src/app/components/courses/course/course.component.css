@@ -9,19 +9,23 @@
     float:left;
     background-color:#669999;
     margin:5% 2% 0 5%;
+    cursor: pointer;
   }
 
   .divKursSc:hover {
       opacity: 0.8;
       border:2.5px solid black;
+      cursor: pointer;
   }
   
   .divKursLang:hover {
     opacity: 0.8;
     border:2px solid black;
+    cursor: pointer;
 }
 
 .divKursLang {
+    cursor: pointer;
     width:200px;
     height: 100px;
     font-weight: bold;
@@ -43,8 +47,8 @@
 
 .selKurs {
     position: absolute;
-    top:30%;
-    right: 0%;
+    top:60%;
+    right: 78.5%;
     border:1px solid black;
     border-radius: 2%;
     background-color:grey;

@@ -26,7 +26,6 @@ export class CoursesListComponent implements OnInit {
 
   ngOnInit() {   
    
-  this.store$.dispatch(new LoadCourses());
   this.courses$ = this.store$.select(state => state.courses);
     
   this.store$

@@ -1,3 +1,8 @@
-<p>
-  teachers-list works!
-</p>
+<div class= "courses-container">
+  
+  <div *ngFor= "let nast of teachers$ | async">
+    <app-teacher [teacher]= "nast">        
+    </app-teacher>      
+  </div>
+
+</div>
