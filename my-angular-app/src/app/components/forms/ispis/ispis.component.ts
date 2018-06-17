@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Student } from "../../../models/student";
+import { SchoolService } from '../../../services/school.service';
 
 
 @Component({
@@ -11,17 +12,16 @@ import { Student } from "../../../models/student";
 
 export class IspisComponent implements OnInit {
 
-  student:Student = new Student(null,"", "", "","");
-  @Output() delete: EventEmitter<Student> = new EventEmitter<Student>();
+  public student:Student = new Student(null, "", "", "", "");
   
-  constructor() { }
+  constructor(private servis: SchoolService) { }
 
   
   ngOnInit() {
   }
   
-  onDeleteStudent() {
-    this.delete.emit({...this.student});
+  onDeleteStudent(student: Student) {
+    this.servis.deleteStudent(student);
   }
 
 }

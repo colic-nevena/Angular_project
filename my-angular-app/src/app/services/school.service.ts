@@ -64,94 +64,46 @@ export class SchoolService {
   }
   
   
-  /*
-  public static getCourses() {              
-    return fetch('http://localhost:3000/predmeti')
-      .then(response => response.json())
-  }
+  
+  
+  
+  
+  deleteStudent(student: Student) : void {    
    
-   
-   
-   
-  public static getStudents() {              
-    return fetch('http://localhost:3000/prijavljeni')
-      .then(response=>response.json())
-  }
-      
-      
-      
-      
-      
-  public static getTeachers() {              
-    return fetch('http://localhost:3000/nastavnici')
-      .then(response=>response.json())
-  }
-      
-   
-   
-  public getStudentByEmail(email) {
-    return fetch(`http://localhost:3000/prijavljeni/?email=${email}`)
-      .then( response => response.json());
-  }
-   
-   
-   
-  public static getCourseByName(ime) {
-    return fetch(`http://localhost:3000/predmeti/?ime=${ime}`)
-      .then( response => response.json());
-   }
-   
-   
-   
-   
-  public static getSelected(id) {
-    return fetch(`http://localhost:3000/predmeti/${id}`)
-      .then(response => response.json())
-   }
-   
-   
-   
-   
-  public static deleteStudent(id) {
-    return fetch(`http://localhost:3000/prijavljeni/${id}`,{
-      method:"DELETE"
-      }).then(response => response.json());        
-  }
-   
-   
-   
-  public static updateCourse(id, data) {
-    return fetch(`http://localhost:3000/predmeti/${id}`, {
-      method: 'PUT',
-      headers: {
-          'Accept': 'application/json,text/plain',
-          'Content-Type': 'application/json'
-          },
-   
-      body: JSON.stringify(data)
-    }).then(res => res.json())
-      
-  }
-   
-   
-   
-   
-  public static addStudent(data) {
-    return fetch('http://localhost:3000/prijavljeni', {
-      method: 'POST',
-      headers: {
-          'Accept': 'application/json,text/plain',
-          'Content-Type': 'application/json'
-          },
-   
-      body: JSON.stringify(data)
-      }).then(res => res.json())
+    const mejl = student.email; 
+    
+    this.http.get<Student>(`http://localhost:3000/prijavljeni/?email=${mejl}`).subscribe(
+    student => {
         
-  }
-  */
+    this.http.delete(`http://localhost:3000/prijavljeni/${student[0].id}`).subscribe(response => response); 
+          
+           
+    this.http.get<Course>(`http://localhost:3000/predmeti/?ime=${student[0].kurs}`).subscribe(
+      kurs => {              
+        
+      const novi = {
+        id: kurs[0].id,
+        ime: kurs[0].ime,
+        rating: kurs[0].rating,
+        mesta_na_kursu: ++kurs[0].mesta_na_kursu,
+        science: kurs[0].science,
+        zabrana_rez: false,
+        dani: kurs[0].dani,
+        sati: kurs[0].sati
+      };
+             
+    this.http.put(`http://localhost:3000/predmeti/${kurs[0].id}`, novi).subscribe(response => response);
+     
+  })  
+          
+          
+          
   
-  
-  
-  
-  
+}); 
+   
+ 
+}
+
+
+
 }

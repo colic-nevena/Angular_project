@@ -5,16 +5,16 @@
 
     <div class="container1">
      <label><strong>Ime</strong></label>
-     <input type="text" placeholder="Unesite Vaše ime" [(ngModel)]="student.ime"/>
+     <input type="text" placeholder="Unesite Vaše ime" name="ime" [(ngModel)]="student.ime"/>
 
     <label><strong>Prezime</strong></label>
-    <input type="text" placeholder="Unesite Vaše prezime" [(ngModel)]="student.prezime"/>
+    <input type="text" placeholder="Unesite Vaše prezime" name="prez" [(ngModel)]="student.prezime"/>
 
     <label><strong>Email adresa</strong></label>
-    <input type="text" placeholder="Unesite Vašu email adresu" [(ngModel)]="student.email"/>  
+    <input type="text" placeholder="Unesite Vašu email adresu" name="mmejl" [(ngModel)]="student.email"/>  
 
 
-    <button type="button" class="btn btn-danger prijavibtn" (click)= "onDeleteStudent()">Ispiši me</button>
+    <button type="button" class="btn btn-danger prijavibtn" (click)= "onDeleteStudent(student)">Ispiši me</button>
 
    </div>
 </form>
