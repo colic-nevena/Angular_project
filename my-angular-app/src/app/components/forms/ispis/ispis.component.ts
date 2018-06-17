@@ -22,6 +22,9 @@ export class IspisComponent implements OnInit {
   
   onDeleteStudent(student: Student) {
     this.servis.deleteStudent(student);
+    this.student.ime = "";
+    this.student.prezime = "";
+    this.student.email = "";
   }
 
 }

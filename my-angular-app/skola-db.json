@@ -201,6 +201,7 @@
     },
     {
       "id": 2,
+      "ime": "Engleski",
       "rating": 4.9,
       "dani": [
         "ponedeljak",
@@ -341,8 +342,8 @@
       "id": 8,
       "ime": "Švedski",
       "rating": 4.5,
-      "brojGlasova": 1,
-      "mesta_na_kursu": 3,
+      "brojGlasova": 4.5,
+      "mesta_na_kursu": 2,
       "science": false,
       "zabrana_rez": false,
       "dani": [
@@ -400,6 +401,13 @@
       "prezime": "Čolić",
       "kurs": "Hemija",
       "email": "mm"
+    },
+    {
+      "id": 3,
+      "ime": "dslkjdk",
+      "prezime": "kmdkmks",
+      "kurs": "Švedski",
+      "email": "dlksnd"
     }
   ]
 }

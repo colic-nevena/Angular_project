@@ -28,6 +28,9 @@ export class UpisComponent implements OnInit {
   
   onAddStudent(student: Student) {    
     this.servis.addNewStudent(student);
+    this.student.ime = "";
+    this.student.prezime = "";
+    this.student.email = "";
   }
 
   
