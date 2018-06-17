@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Course } from '../../../models/course';
+import { SchoolService } from '../../../services/school.service';
 
 @Component({
   selector: 'app-course',
@@ -15,19 +16,17 @@ export class CourseComponent implements OnInit {
   @Output() public selectedCourse: EventEmitter<Course>= new EventEmitter<Course>();
   
   
-  constructor() { 
+  constructor(private servis: SchoolService) { 
     this.selected = false;
   }
 
   ngOnInit() {
   }
-
-  
+ 
   
   public selectCourse() {
     this.selectedCourse.emit(this.course);
   }
-  
   
   
   

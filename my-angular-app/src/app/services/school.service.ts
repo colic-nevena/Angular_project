@@ -50,6 +50,7 @@ export class SchoolService {
           id: kurs[0].id,
           ime: kurs[0].ime,
           rating: kurs[0].rating,
+          brojGlasova: kurs[0].rating,
           mesta_na_kursu: br,
           science: kurs[0].science,
           zabrana_rez: zab,
@@ -85,6 +86,7 @@ export class SchoolService {
         id: kurs[0].id,
         ime: kurs[0].ime,
         rating: kurs[0].rating,
+        brojGlasova: kurs[0].brojGlasova,
         mesta_na_kursu: ++kurs[0].mesta_na_kursu,
         science: kurs[0].science,
         zabrana_rez: false,
@@ -103,6 +105,34 @@ export class SchoolService {
    
  
 }
+
+
+  updateTeacher(teacher: Teacher) {
+    console.log(teacher)
+    this.http.get<Teacher>(`http://localhost:3000/nastavnici/${teacher.id}`).subscribe(
+      teach => { 
+ 
+      
+      const rejt = (teach.rating+0.1 < 5) ? teach.rating+0.1 : 5;     
+        
+      const novi = {
+        id: teach.id,
+        licno_ime: teach.licno_ime,
+        rating: rejt,
+        kursevi:teach.kursevi,
+        dani: teach.dani,
+        sati: teach.sati
+      };
+             
+    this.http.put(`http://localhost:3000/nastavnici/${teach.id}`, novi).subscribe(response => response);
+     
+  })  
+  
+  }
+
+
+
+
 
 
 

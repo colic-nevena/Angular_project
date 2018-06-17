@@ -25,30 +25,29 @@
         })
     )
       
-  }
+}
   
   
   
   
   
-  @Injectable() 
-  export class SelectByDayEffects {
+@Injectable() 
+export class SelectByDayEffects {
     
       
-    constructor(private actions$: Actions, 
-                private coursesService: fromServices.SchoolService) {}
+constructor(private actions$: Actions, 
+    private coursesService: fromServices.SchoolService) {}
           
-  @Effect() 
-  
-    loadCoursesByDay$ = this.actions$.ofType(coursesActions.SELECT_BY_DAY)    
-        .pipe(
-        switchMap((action) => {      
+@Effect()   
+loadCoursesByDay$ = this.actions$.ofType(coursesActions.SELECT_BY_DAY)    
+    .pipe(
+    switchMap((action) => {      
                   
-            const {dan} = action as SelectByDay;               
-            return this.coursesService.getCourses().pipe(                                
-                map(courses => new coursesActions.SelectByDaySuccess(courses, dan))                
-            )        
-        })
-    )
+    const {dan} = action as SelectByDay;               
+    return this.coursesService.getCourses().pipe(                                
+    map(courses => new coursesActions.SelectByDaySuccess(courses, dan))                
+    )        
+ })
+)
       
-  }
+}

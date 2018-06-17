@@ -1,42 +1,3 @@
-.divKursSc {
-    width:200px;
-    height: 100px;
-    font-weight: bold;
-    font-size: 20px;  
-    text-align: center;
-    vertical-align: middle;    
-    border:1px solid black;
-    float:left;
-    background-color:#669999;
-    margin:5% 2% 0 5%;
-  }
-
-  .divKursSc:hover {
-      opacity: 0.8;
-      border:2.5px solid black;
-  }
-  
-  .divKursLang:hover {
-    opacity: 0.8;
-    border:2px solid black;
-}
-
-
-  
-  .divKursLang {
-    width:200px;
-    height: 100px;
-    font-weight: bold;
-    font-size: 20px;  
-    text-align: center;
-    vertical-align: middle;    
-    border:1px solid black;
-    float:left;
-    background-color:#4d648d;
-    margin:5% 2% 0 5%;
-  }
-  
-  
 .txt-stil {
     font-size: 14px;  
     font-weight: normal;
@@ -54,35 +15,7 @@
  
 }
 
-  
-#naslov {
-    display: block;
-    margin:0 20%;
-}
 
-.selKurs {
-    position: absolute;
-    top:30%;
-    right: 0%;
-    border:1px solid black;
-    border-radius: 2%;
-    background-color:grey;
-}
-
-
-.info {
-    left:4%;
-    top:9%;
-    position: absolute;
-    font-style: italic;
-}
-
-.kContainer {
-    background-color: #A9C7C7;    
-    position: absolute;
-    left:0%;   
-    width:85%;
-}
 
 .donjiDeo {
     background-color: #A9C7C7;
@@ -92,19 +25,9 @@
 }
 
 
-.nContainer {
-    background-color: #A9C7C7;
-    margin:auto;
-    display: block;
-    height: 570px;
-    width:90%;
-    position:relative;
-}
-
-
 .divTeach {
     width:200px;
-    height: 100px;
+    height: 150px;
     font-weight: bold;
     font-size: 20px;  
     text-align: center;
@@ -112,18 +35,9 @@
     border:1px solid black;
     float:left;
     background-color:#669999;
-    margin:5% 2% 0 5%;
+    margin:5% 2% 5% 5%;
     cursor: none;
 }
 
-.nast{
-   margin-left: 8%;
-}
-
-.btnNajbolji {
-    position: absolute;
-    bottom:0%;
-    left: 13%;
-}
 
 

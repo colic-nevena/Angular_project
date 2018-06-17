@@ -4,6 +4,7 @@ export class Course {
         public id: number,
         public ime: string,
         public rating: number,
+        public brojGlasova: number,
         public mesta_na_kursu: number,
         public science: boolean,
         public zabrana_rez: boolean,

@@ -10,6 +10,7 @@ export const LOAD_TEACHERS = "Load teachers";
 export const LOAD_TEACHERS_SUCCESS = "Load teachers Success";
 export const SELECT_BY_DAY = "Select by day";
 export const SELECT_BY_DAY_SUCCESS = "Select by day Success";
+export const RATE_COURSE_REQ = "Rate course requested";
 
 
 
@@ -73,3 +74,6 @@ export class SelectByDaySuccess implements Action {
         
     }
 }
+
+
+

@@ -4,6 +4,7 @@ import { Course } from '../../../models/course';
 import { State } from "../../../store";
 import { Store } from "@ngrx/store";
 import { LoadCourses, SelectCourse, SelectByDay } from '../../../store/actions';
+import { SchoolService } from '../../../services/school.service';
 
 @Component({
   selector: 'app-courses-list',
@@ -55,8 +56,6 @@ export class CoursesListComponent implements OnInit {
   selectByDay(dan) {    
     this.store$.dispatch(new SelectByDay(dan))
   }
-  
-  
-  
+ 
 
 }

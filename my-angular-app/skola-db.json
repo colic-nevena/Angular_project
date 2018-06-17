@@ -3,7 +3,7 @@
     {
       "id": 1,
       "licno_ime": "Nenad Jović",
-      "rating": 4.38,
+      "rating": 4.88,
       "kursevi": [
         "matematika",
         "hemija",
@@ -31,7 +31,7 @@
     {
       "id": 2,
       "licno_ime": "Danica Jović",
-      "rating": 4.53,
+      "rating": 4.23,
       "kursevi": [
         "engleski",
         "nemački",
@@ -57,7 +57,7 @@
     {
       "id": 3,
       "licno_ime": "Helena Milić",
-      "rating": 4.24,
+      "rating": 4.25,
       "kursevi": [
         "engleski",
         "nemački",
@@ -107,7 +107,7 @@
     {
       "id": 5,
       "licno_ime": "Marija Stošić",
-      "rating": 4.9,
+      "rating": 5,
       "kursevi": [
         "hemija",
         "fizika",
@@ -155,7 +155,7 @@
     {
       "id": 7,
       "licno_ime": "Petar Stošić",
-      "rating": 4.89,
+      "rating": "0.001",
       "kursevi": [
         "matematika",
         "tehničko"
@@ -181,6 +181,7 @@
       "id": 1,
       "ime": "Matematika",
       "rating": 5,
+      "brojGlasova": 1,
       "mesta_na_kursu": 4,
       "science": true,
       "zabrana_rez": false,
@@ -200,11 +201,7 @@
     },
     {
       "id": 2,
-      "ime": "Fizika",
-      "rating": 4.8,
-      "mesta_na_kursu": 8,
-      "science": true,
-      "zabrana_rez": false,
+      "rating": 4.9,
       "dani": [
         "ponedeljak",
         "utorak",
@@ -226,6 +223,7 @@
       "id": 3,
       "ime": "Hemija",
       "rating": 4.7,
+      "brojGlasova": 1,
       "mesta_na_kursu": 7,
       "science": true,
       "zabrana_rez": false,
@@ -248,6 +246,7 @@
       "id": 4,
       "ime": "Engleski",
       "rating": 4.88,
+      "brojGlasova": 1,
       "mesta_na_kursu": 3,
       "science": false,
       "zabrana_rez": false,
@@ -272,6 +271,7 @@
       "id": 5,
       "ime": "Nemački",
       "rating": 4.68,
+      "brojGlasova": 1,
       "mesta_na_kursu": 5,
       "science": false,
       "zabrana_rez": false,
@@ -295,6 +295,7 @@
       "id": 6,
       "ime": "Španski",
       "rating": 4.9,
+      "brojGlasova": 1,
       "mesta_na_kursu": 4,
       "science": false,
       "zabrana_rez": false,
@@ -318,6 +319,7 @@
       "id": 7,
       "ime": "Norveški",
       "rating": 4.9,
+      "brojGlasova": 1,
       "mesta_na_kursu": 0,
       "zabrana_rez": true,
       "dani": [
@@ -339,6 +341,7 @@
       "id": 8,
       "ime": "Švedski",
       "rating": 4.5,
+      "brojGlasova": 1,
       "mesta_na_kursu": 3,
       "science": false,
       "zabrana_rez": false,
@@ -361,6 +364,7 @@
       "id": 9,
       "ime": "Tehničko",
       "rating": 4.8,
+      "brojGlasova": 1,
       "mesta_na_kursu": 3,
       "science": true,
       "zabrana_rez": false,
